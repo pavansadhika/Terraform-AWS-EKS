@@ -41,3 +41,9 @@ jobs:
         terraform apply -auto-approve \
           #-var="cluster_name=my-eks-cluster" \
           #-var="region=us-east-1"
+     
+    - name: Wait for application to start
+      run: sleep 300
+    - name: destroy eks cluster
+      run: terraform destroy -auto-approve
+      
