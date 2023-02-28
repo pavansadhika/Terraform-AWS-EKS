@@ -25,6 +25,7 @@ jobs:
 
     - name: Initialize Terraform
       run: |
+        aws sts get-caller-identity
         terraform init \
           -backend-config="bucket=my-terraform-state-bucket" \
           -backend-config="key=my-eks-cluster/terraform.tfstate" \
@@ -32,7 +33,7 @@ jobs:
 
     - name: Plan Terraform changes
       run: |
-        terraform plan \
+        terraform plan -var "aws_access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "aws_secret_key=${{ secrets.AWS_SECRET_KEY }}"
           #-var="cluster_name=my-eks-cluster" \
           #-var="region=us-east-1"
 
