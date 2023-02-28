@@ -1,7 +1,9 @@
-variable "access_key" {
-  default = "aws-access-key-id"
-}
 
-variable "secret_key" {
-    default = "aws-secret-access-key"
+variable "aws-access-key-id" {
+  type = string
+  description = "AWS Access Key ID"
+}
+variable "aws-secret-access-key" {
+  type = string
+  description = "AWS Access Key ID"
 }
