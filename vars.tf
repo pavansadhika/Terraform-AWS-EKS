@@ -1,7 +1,6 @@
 variable "access_key" {
-  default = "${{ secrets.AWS_ACCESS_KEY_ID }}"
+  description = "AWS access key"
 }
-
 variable "secret_key" {
-    default = "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+    description = "AWS secret key"
 }
