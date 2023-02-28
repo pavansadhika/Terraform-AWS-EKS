@@ -33,7 +33,7 @@ jobs:
 
     - name: Plan Terraform changes
       run: |
-        terraform plan -var "aws_access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "aws_secret_key=${{ secrets.AWS_SECRET_KEY }}"
+        terraform plan -var "aws-access-key-id=${{ secrets.AWS_ACCESS_KEY }}" -var "aws-secret-access-key=${{ secrets.AWS_SECRET_KEY }}"
           #-var="cluster_name=my-eks-cluster" \
           #-var="region=us-east-1"
 
