@@ -33,11 +33,11 @@ jobs:
     - name: Plan Terraform changes
       run: |
         terraform plan \
-          -var="cluster_name=my-eks-cluster" \
-          -var="region=us-east-1"
+          #-var="cluster_name=my-eks-cluster" \
+          #-var="region=us-east-1"
 
     - name: Apply Terraform changes
       run: |
         terraform apply -auto-approve \
-          -var="cluster_name=my-eks-cluster" \
-          -var="region=us-east-1"
+          #-var="cluster_name=my-eks-cluster" \
+          #-var="region=us-east-1"
